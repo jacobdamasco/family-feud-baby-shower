@@ -1,0 +1,171 @@
+.main-font {
+    font-family: 'Francois One', sans-serif;
+    font-size: 3vw;
+}
+
+.game-font, .answer-font {
+    font-family: 'Francois One', sans-serif;
+    font-size: 4vw;
+}
+
+.next-btn-font {
+    font-family: 'Francois One', sans-serif;
+    font-size: 2vw;
+    color: white; 
+}
+
+.wrong-answer-font {
+    font-family: 'Francois One', sans-serif;
+    font-size: 15vw;
+    color: red;
+    border: 15px solid red;
+    border-radius: 15px;
+    background-color: rgba(255,0,0,0.25);
+}
+
+.number-font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.family-feud-logo  {
+    width: 75vh;
+}
+
+.container-start {
+    background-image: linear-gradient(to bottom, #13235d, #000111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.container-scoreboard {
+    background-image: url('imgs/family_feud_score.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container-next-btn {
+    display: flex;
+    justify-content: center;
+    top: 70%;
+    min-width: 100vw;
+    position: absolute;
+}
+
+.container-round {
+    background-image: url('imgs/family_feud_round_bg.png');
+    background-position: center;
+    background-size: 100%;
+    min-height: 100vh;
+}
+
+.container-answer {
+    width: 75%;
+    height: 570px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.next-btn {
+    position: relative;
+    width: 10vw;
+    height: 10vh;
+    background-color: #275189;
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255,255,255,0);
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: .2s ease-in-out;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.x-modal {
+    width: 75%;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-start {
+    color: white;
+}
+
+.link-start:hover {
+    color: gray;
+}
+
+.team-1 {
+    position: absolute;
+    left: 375px;
+    top: 285px;
+}
+
+.team-2 {
+    position: absolute;
+    right: 375px;
+    top: 285px;
+}
+
+.answer-card {
+    width: calc(50% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    border: 5px solid white;
+    transform-style: preserve-3d;
+    transition: transform.5s;
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: blue;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateX(180deg);
+}
+
+.back-face {
+    background-image: linear-gradient(to bottom, #1aa7ec, blue);
+}
+
+.oval {
+    width: 140px;
+    height: 70px;
+    background-color: #00008B;
+    border-radius: 100%;
+    justify-content: center;
+}
+
+.answer {
+    height:100%;
+    background-color:#13235d;
+}
+
+.flip{
+    transform:rotateX(180deg);
+}

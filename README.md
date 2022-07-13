@@ -1,4 +1,4 @@
-# Baby Shower Family Feud
+# Family Feud: Baby Shower Edition!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
