@@ -8,6 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [x] Next button to redirect to rounds
   - [ ] Update team scores after a round is finished
 - [ ] Round 1
+  - [ ] Update round score when answer is flipped
   - [x] Flip answer functionality
   - [x] Add audio when answer is flipped
   - [x] Strike functionality
