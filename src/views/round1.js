@@ -23,7 +23,7 @@ const Round1 = () => {
           <h1 className="round-score game-font text-white text-center">{roundScore}</h1>
         </div>
 
-        <div className="container-answer mx-auto my-5" >
+        <div className="container-answer mx-auto my-5">
           <AnswerCard answerNum={"1"} answer={"SING LULLABY"} answerPts={51} />
           <AnswerCard answerNum={"5"} answer={"READ"} answerPts={4} />
           <AnswerCard answerNum={"2"} answer={"ROCK THEM"} answerPts={32} />

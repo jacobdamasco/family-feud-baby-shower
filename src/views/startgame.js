@@ -1,8 +1,16 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import familyFeudLogo from '../imgs/family_feud_logo.png';
+import useSound from 'use-sound';
+import useKey from '../components/useKey';
+import startMusic from '../audio/start_game.mp3';
 
 const StartGame = () => {
+
+	const space = ' ';
+	const [startMusicAudio] = useSound(startMusic);
+	
+	if (useKey(space)) { startMusicAudio() };
 
 	useEffect(() => {
 		console.log("Start game rendered.");

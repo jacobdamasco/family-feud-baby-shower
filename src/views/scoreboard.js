@@ -12,7 +12,6 @@ const Scoreboard = () => {
   });
 
   return (
-    
     <div className="container-scoreboard">
         <div className="team-1">
           <TeamScore />
