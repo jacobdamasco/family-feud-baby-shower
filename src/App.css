@@ -21,6 +21,7 @@
     border: 15px solid red;
     border-radius: 15px;
     background-color: rgba(255,0,0,0.25);
+    margin-top: 20vh;
 }
 
 .number-font {
@@ -80,31 +81,19 @@
     background-color: #275189;
 }
 
-.modal-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(255,255,255,0);
+.modal-dialog {
     display: flex;
-    visibility: hidden;
-    opacity: 0;
-    transform: scale(0);
-    transition: .2s ease-in-out;
+    justify-content: center;
+    align-items: center;
 }
 
-.bg-active {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
+.modal-content, .modal-header {
+    background-color: rgba(0,0,0,0);
+    border: none;
 }
 
-.x-modal {
-    width: 75%;
-    height: 30vh;
-    display: flex;
-    flex-wrap: wrap;
+.fade {
+    transition: 0.2s ease-in-out;
 }
 
 .link-start {

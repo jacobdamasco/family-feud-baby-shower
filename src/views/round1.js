@@ -30,9 +30,8 @@ const Round1 = () => {
           <AnswerCard answerNum={"4"} answer={"GO ON CAR RIDE"} answerPts={"8"} />
           <BlankCard />
         </div>
-        <div class="modal-bg justify-content-center align-items-center">
-          <Strike />
-        </div>
+        
+        <Strike />
     </div>
   );
 
