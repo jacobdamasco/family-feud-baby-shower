@@ -1,21 +1,23 @@
 import { useState } from "react";
+// import RoundScore from "./RoundScore";
+import Round1 from "../views/round1";
 import useSound from 'use-sound';
-import ahhh from '../audio/ahhh.mp3';
+// import ahhh from '../audio/ahhh.mp3';
 import cheering from '../audio/cheering.mp3';
 import correct from '../audio/correct.mp3';
-import faceoff from '../audio/faceoff.mp3';
-import strike from '../audio/strike.mp3';
-
+// import faceoff from '../audio/faceoff.mp3';
+// import strike from '../audio/strike.mp3';
 
 const AnswerCard = (props) => {
+  // States
   const [isFlipped, setIsFlipped] = useState(false);
 
-  //Audio
+  // Audio
   const [correctAudio] = useSound(correct);
   const [cheerAudio] = useSound(cheering);
 
-  const flipCard = (prevFlip) => {
-    setIsFlipped(current => !current);
+  const flipCard = () => {
+    setIsFlipped(currentState => !currentState);
   }
 
   return (

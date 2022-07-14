@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] Round 1
   - [x] Flip answer functionality
   - [x] Add audio when answer is flipped
-  - [ ] Strike functionality
+  - [x] Strike functionality
   - [x] Add Strike audio
   - [ ] Round finished - redirect to scoreboard
     - [ ] Press <kbd>1</kbd> to add pts to team 1
