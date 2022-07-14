@@ -1,13 +1,24 @@
 import AnswerCard from "../components/AnswerCard";
 import BlankCard from "../components/BlankCard";
+import Strike from "../components/Strike";
+import useKey from "../components/useKey";
+import useSound from 'use-sound';
+import faceoff from '../audio/faceoff.mp3';
 
 const Round1 = () => {
+  
+  const [faceoffAudio] = useSound(faceoff);
+  const space = useKey(' ');
+
+
+  if (space) { faceoffAudio(); }
+
 
   return (
-    <div class="container-round">
-        <div class="row justify-content-center">
-            <h1 class="round-score game-font text-white text-center">0</h1>
-        </div>
+    <div className="container-round">
+        <div className="row justify-content-center">
+            <h1 className="round-score game-font text-white text-center">0</h1>
+        </div> 
 
         <div className="container-answer mx-auto my-5">
           <AnswerCard answerNum={"1"} answer={"SING LULLABY"} answerPts={"51"} />
@@ -19,13 +30,12 @@ const Round1 = () => {
           <AnswerCard answerNum={"4"} answer={"GO ON CAR RIDE"} answerPts={"8"} />
           <BlankCard />
         </div>
-
         <div class="modal-bg justify-content-center align-items-center">
-            <div class="x-modal justify-content-center align-items-center">
-            </div>
+          <Strike />
         </div>
     </div>
   );
+
 }
 
 

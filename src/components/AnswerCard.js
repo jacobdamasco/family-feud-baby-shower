@@ -4,7 +4,6 @@ import ahhh from '../audio/ahhh.mp3';
 import cheering from '../audio/cheering.mp3';
 import correct from '../audio/correct.mp3';
 import faceoff from '../audio/faceoff.mp3';
-import roundWinner from '../audio/round_winner.mp3';
 import strike from '../audio/strike.mp3';
 
 
@@ -12,8 +11,8 @@ const AnswerCard = (props) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   //Audio
-  const [playCorrect] = useSound(correct);
-  const [playCheer] = useSound(cheering);
+  const [correctAudio] = useSound(correct);
+  const [cheerAudio] = useSound(cheering);
 
   const flipCard = (prevFlip) => {
     setIsFlipped(current => !current);
@@ -22,8 +21,8 @@ const AnswerCard = (props) => {
   return (
       <div className={"answer-card " + (isFlipped ? 'flip' : '')} onClick={() => {
         flipCard();
-        playCorrect();
-        playCheer();
+        correctAudio();
+        cheerAudio();
       }}>
         <div className="front-face row mx-auto">
           <div className="col-10 answer"><h1 className="text-white text-center game-font">{props.answer}</h1></div>

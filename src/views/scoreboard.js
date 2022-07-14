@@ -7,6 +7,10 @@ const Scoreboard = () => {
   var roundNum = 1;
   var round = "/round" + roundNum.toString();
 
+  useEffect(() => {
+    console.log("Scoreboard rendered.");
+  });
+
   return (
     
     <div className="container-scoreboard">

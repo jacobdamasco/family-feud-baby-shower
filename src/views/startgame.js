@@ -1,9 +1,14 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import familyFeudLogo from '../imgs/family_feud_logo.png';
 
 const StartGame = () => {
 
-    return (
+	useEffect(() => {
+		console.log("Start game rendered.");
+	});
+
+		return (
 			<div>
 				<div className="container-start">
 						<div className="column">
@@ -14,8 +19,8 @@ const StartGame = () => {
 							</Link>
 						</div>
 				</div>
-      </div>
-    );
+			</div>
+		);
 }
 
 export default StartGame;
