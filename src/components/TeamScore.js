@@ -1,11 +1,9 @@
-import { useState } from 'react';
 
-const TeamScore = () => {
-  const [teamScore, setTeamScore] = useState(0);
-  
+const TeamScore = (props) => {
+
   return (
-    <div>
-      <h1 className="main-font text-white">{teamScore}</h1>
+    <div className={props.teamContainerClass}>
+      <h1 className="main-font text-white">{(props.teamContainerClass === "team-1") ? props.team1Score : props.team2Score}</h1>
     </div>
   );
 }

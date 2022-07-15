@@ -4,7 +4,7 @@ import cheering from '../audio/cheering.mp3';
 import correct from '../audio/correct.mp3';
 
 const AnswerCard = (props) => {
-  // Vars for easier naming
+  // Renaming prop variables for ease of use
   const currScore = props.currRoundScore;
 
   // States

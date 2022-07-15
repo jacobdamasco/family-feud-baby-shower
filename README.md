@@ -4,18 +4,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## To Do
 - [x] Start Game
-- [ ] Scoreboard
+- [x] Scoreboard
   - [x] Next button to redirect to rounds
-  - [ ] Update team scores after a round is finished
-- [ ] Round(s)
+  - [x] Update team scores after a round is finished
+- [x] Round(s)
   - [x] Update round score when answer is flipped
   - [x] Flip answer functionality
   - [x] Add audio when answer is flipped
   - [x] Strike functionality
   - [x] Add Strike audio
-  - [ ] Press <kbd>1</kbd> to add pts to team 1
-  - [ ] Press <kbd>2</kbd> to add pts to team 2
+  - [x] Press <kbd>1</kbd> to add pts to team 1
+  - [x] Press <kbd>2</kbd> to add pts to team 2
   - [x] Press <kbd>→</kbd> & hit next to head to scoreboard after round finishes
+- [ ] Thanks for Playing!
 
 ## How to Run Project
 

@@ -11,34 +11,46 @@ import EndRound from "../components/EndRound";
 import useSound from 'use-sound';
 import faceoff from '../audio/faceoff.mp3';
 import roundWinner from '../audio/round_winner.mp3';
-import { Link } from "react-router-dom";
 
 
+const Round1 = (props) => {
 
-const Round1 = () => {
   // Audio
   const [faceoffAudio] = useSound(faceoff);
   const [roundWinnerAudio] = useSound(roundWinner);
 
   // Keydown
   const space = useKey(' ');
-  const aKey = useKey('a');
-  const rightArrow = useKey('ArrowRight');
+  const enterKey = useKey('Enter');
   if (space) { faceoffAudio(); }
-  if (aKey) { roundWinnerAudio() }
+  if (enterKey) { roundWinnerAudio() }
 
+  // State variables from useState() in App.js
+  // renaming them for easier use
+  const team1Score = props.team1Score;
+  const team2Score = props.team2Score;
+  const setRound = props.setRound;
+  const setTeam1Score = props.setTeam1Score;
+  const setTeam2Score = props.setTeam2Score;
 
   // States
   const [roundScore, setRoundScore] = useState(0);
 
+  // Effects Helper Function
+  const handleKeyDown = (e) => {
+    if (e.key === '1') {
+      setTeam1Score(roundScore + team1Score);
+      setRound(2);
+    } else if (e.key === '2') {
+      setTeam2Score(roundScore + team2Score);
+      setRound(2);
+    }
+  }
+
   // Effects
   useEffect(() => {
-    // need anything here?
+    window.addEventListener('keydown', handleKeyDown);
   })
-
-  const handleLinkKeyDown = () => {
-    if (rightArrow) {}
-  }
 
   return (
 
