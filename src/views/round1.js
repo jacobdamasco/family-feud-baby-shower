@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import AnswerCard from "../components/AnswerCard";
 import BlankCard from "../components/BlankCard";
 import Strike from "../components/Strike";
 import useKey from "../components/useKey";
+import RoundScore from "../components/RoundScore";
+import FaceoffStrike from "../components/FaceoffStrike";
+import EndRound from "../components/EndRound";
+
+// importing useSounds, sound files
 import useSound from 'use-sound';
 import faceoff from '../audio/faceoff.mp3';
 import roundWinner from '../audio/round_winner.mp3';
-import RoundScore from "../components/RoundScore";
-import FaceoffStrike from "../components/FaceoffStrike";
+import { Link } from "react-router-dom";
+
+
 
 const Round1 = () => {
   // Audio
@@ -18,8 +22,11 @@ const Round1 = () => {
 
   // Keydown
   const space = useKey(' ');
+  const aKey = useKey('a');
+  const rightArrow = useKey('ArrowRight');
   if (space) { faceoffAudio(); }
-  if (useKey('a')) { roundWinnerAudio() }
+  if (aKey) { roundWinnerAudio() }
+
 
   // States
   const [roundScore, setRoundScore] = useState(0);
@@ -29,6 +36,9 @@ const Round1 = () => {
     // need anything here?
   })
 
+  const handleLinkKeyDown = () => {
+    if (rightArrow) {}
+  }
 
   return (
 
@@ -44,11 +54,11 @@ const Round1 = () => {
           <BlankCard />
           <AnswerCard answerNum={"4"} answer={"GO ON CAR RIDE"} answerPts={8} currRoundScore={roundScore} setRoundScore={setRoundScore}/>
           <BlankCard />
-          <Link to={"/scoreboard"} className='link-primary text-decoration-none'><Button variant="light" className="next-btn next-btn-font">Next</Button></Link>
         </div>
 
         <FaceoffStrike />
         <Strike />
+        <EndRound />
     </div>
 
   );

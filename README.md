@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [x] Add Strike audio
   - [ ] Press <kbd>1</kbd> to add pts to team 1
   - [ ] Press <kbd>2</kbd> to add pts to team 2
-  - [ ] Press <kbd>→</kbd> to head to scoreboard after round finishes
+  - [x] Press <kbd>→</kbd> & hit next to head to scoreboard after round finishes
 
 ## How to Run Project
 
