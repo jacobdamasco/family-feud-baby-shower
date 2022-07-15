@@ -2,17 +2,17 @@ import { useEffect } from 'react';
 import familyFeudLogo from '../imgs/family_feud_baby_shower_ed.png';
 import useSound from 'use-sound';
 import useKey from '../components/useKey';
-import startMusic from '../audio/start_game.mp3';
+import endMusic from '../audio/end_game.mp3';
 
 const StartGame = () => {
 
 	const space = ' ';
-	const [startMusicAudio] = useSound(startMusic);
+	const [endMusicAudio] = useSound(endMusic);
 	
-	if (useKey(space)) { startMusicAudio() };
+	if (useKey(space)) { endMusicAudio() };
 
 	useEffect(() => {
-		console.log("Start game rendered.");
+		console.log("End game rendered.");
 	});
 
 		return (
