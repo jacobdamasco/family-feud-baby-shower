@@ -33,7 +33,7 @@
 
 /* Imgs */
 .family-feud-logo  {
-    width: 75vh;
+    width: 125vh;
 }
 
 /* Containers */
@@ -122,20 +122,20 @@
 /* Scoreboard Page */
 .team-1 {
     position: absolute;
-    left: 375px;
-    top: 285px;
+    left: 51.5vh;
+    top: 40vh;
 }
 
 .team-2 {
     position: absolute;
-    right: 375px;
-    top: 285px;
+    right: 51.5vh;
+    top: 40vh;
 }
 
 /* Rounds  */
 .answer-card {
     width: calc(50% - 10px);
-    height: calc(25% - 10px);
+    height: calc(35% - 10px);
     margin: 5px;
     position: relative;
     border: 5px solid white;
@@ -160,10 +160,10 @@
 }
 
 .oval {
-    width: 140px;
-    height: 70px;
+    width: 10vw;
+    height: 5vw;
     background-color: #00008B;
-    border-radius: 100%;
+    border-radius: 50%;
     justify-content: center;
 }
 

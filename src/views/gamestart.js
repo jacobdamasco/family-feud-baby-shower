@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import familyFeudLogo from '../imgs/family_feud_logo.png';
+import familyFeudLogo from '../imgs/family_feud_baby_shower_ed.png';
 import useSound from 'use-sound';
 import useKey from '../components/useKey';
 import startMusic from '../audio/start_game.mp3';
