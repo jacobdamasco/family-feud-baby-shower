@@ -12,6 +12,7 @@ const Scoreboard = () => {
   });
 
   return (
+    
     <div className="container-scoreboard">
         <div className="team-1">
           <TeamScore />
@@ -23,6 +24,7 @@ const Scoreboard = () => {
           <Link to={round} className='link-primary text-decoration-none'><Button variant="light" className="next-btn next-btn-font">Next</Button></Link>
         </div>
     </div>
+
   );
 
 }
