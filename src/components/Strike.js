@@ -17,7 +17,6 @@ const Strike = () => {
   const handleOpen = () => { 
     if (strikeCt < 3) {
       setStrikeCt(strikeCt + 1);
-      console.log(strikeCt);
     } else if (strikeCt === 3) {
       setStrikeCt(1);
       roundWinnerAudio();
@@ -48,9 +47,9 @@ const Strike = () => {
     <>
       <Modal show={show} animation={true}>
         <Modal.Header className='justify-content-center'>
-          <Modal.Title className={(strikeCt >= 1) ? "wrong-answer-font mx-3 px-5" : ''}>X</Modal.Title>
-          <Modal.Title className={(strikeCt >= 2) ? "wrong-answer-font mx-3 px-5" : ''}>X</Modal.Title>
-          <Modal.Title className={(strikeCt >= 3) ? "wrong-answer-font mx-3 px-5" : ''}>X</Modal.Title>
+          <Modal.Title className={(strikeCt >= 1) ? "wrong-answer-font mx-3 px-5" : ''}>{(strikeCt >= 1) ? "X" : ''}</Modal.Title>
+          <Modal.Title className={(strikeCt >= 2) ? "wrong-answer-font mx-3 px-5" : ''}>{(strikeCt >= 2) ? "X" : ''}</Modal.Title>
+          <Modal.Title className={(strikeCt >= 3) ? "wrong-answer-font mx-3 px-5" : ''}>{(strikeCt >= 3) ? "X" : ''}</Modal.Title>
         </Modal.Header>
       </Modal>
     </>
