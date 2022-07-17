@@ -19,7 +19,6 @@ const AnswerCard = (props) => {
     props.setRoundScore(currScore + pts);
     correctAudio();
     cheerAudio();
-    console.log(pts);
   }
 
   return (

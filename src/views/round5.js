@@ -21,9 +21,7 @@ const Round5 = (props) => {
 
   // Keydown
   const space = useKey(' ');
-  const enterKey = useKey('Enter');
   if (space) { faceoffAudio(); }
-  if (enterKey) { roundWinnerAudio() }
 
   // State variables from useState() in App.js
   // renaming them for easier use
@@ -35,13 +33,16 @@ const Round5 = (props) => {
 
   // States
   const [roundScore, setRoundScore] = useState(0);
+  const [strikeCt, setStrikeCt] = useState(0);
 
   // Effects Helper Function
   const handleKeyDown = (e) => {
     if (e.key === '1') {
+      roundWinnerAudio()
       setTeam1Score(roundScore + team1Score);
       setRound(6);
     } else if (e.key === '2') {
+      roundWinnerAudio()
       setTeam2Score(roundScore + team2Score);
       setRound(6);
     }
@@ -50,6 +51,7 @@ const Round5 = (props) => {
   // Effects
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
+    return () =>  {window.removeEventListener('keydown', handleKeyDown)}
   })
 
   return (
@@ -69,7 +71,7 @@ const Round5 = (props) => {
         </div>
 
         <FaceoffStrike />
-        <Strike />
+        <Strike strikeCt={strikeCt} setStrikeCt={setStrikeCt} />
         <EndRound />
     </div>
 
